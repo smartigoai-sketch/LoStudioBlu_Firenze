@@ -19,7 +19,8 @@ export default function ProfGiuliaRossi() {
         <input type="text" name="nome" placeholder="Tuo nome" required style={{padding:'10px', fontSize:'16px'}} />
         <input type="email" name="email" placeholder="Tua email" required style={{padding:'10px', fontSize:'16px'}} />
         <textarea name="messaggio" placeholder="Il tuo messaggio" rows="4" required style={{padding:'10px', fontSize:'16px'}} />
-     <button type="submit" style={{ ... }}>Invia</button>
+     <button type="submit">Invia</button>
+
       </form>
         <style>{`
   /* 🔗 Link generali */
