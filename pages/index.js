@@ -24,73 +24,78 @@ export default function Home() {
 
       {/* HOME */}
       <section id="home" style={{textAlign:'center', padding:'60px 20px'}}>
-        <img src="/logo.png" alt="Logo Studio Blu" style={{width:'100px', marginBottom:'20px'}} />
+        <img 
+  src="/logo.png" 
+  alt="Logo Studio Blu" 
+  style={{
+    width:'200px',       // dimensione raddoppiata
+    maxWidth:'80%',      // si adatta su mobile
+    marginBottom:'30px', // un po’ più di spazio sotto
+    filter:'drop-shadow(0 0 8px rgba(0,0,0,0.15))' // leggero effetto glow
+  }} 
+/>
+
         <h2 style={{fontSize:'28px', marginBottom:'10px'}}>Benvenuti nello Studio Blu</h2>
         <p style={{maxWidth:'600px', margin:'0 auto', fontSize:'16px', lineHeight:1.6}}>
           Un luogo dedicato all’ascolto, alla crescita personale e al benessere psicologico.
         </p>
       </section>
 
-      {/* CHI SIAMO */}
-      <section id="chi-siamo" style={{padding:'60px 20px', background:'#f8f8f8'}}>
-        <h2 style={{textAlign:'center', fontSize:'26px', marginBottom:'30px'}}>Chi siamo</h2>
-        <div style={{
-          display:'grid',
-          gridTemplateColumns:'repeat(auto-fit, minmax(200px, 1fr))',
-          gap:'20px',
-          maxWidth:'900px',
-          margin:'0 auto'
-        }}>
-          <div style={{
-            border:'1px solid #ddd',
-            borderRadius:'10px',
-            padding:'20px',
-            textAlign:'center',
-            transition:'transform 0.3s',
-            background:'#fff'
-          }}>
-            <img src="/prof1.jpg" alt="Psicologo 1" style={{width:'100%', borderRadius:'8px', marginBottom:'10px'}} />
-            <h3>Nome Psicologo 1</h3>
-            <p>Psicologo clinico</p>
-          </div>
+    {/* CHI SIAMO */}
+<section id="chi-siamo" style={{padding:'80px 20px', background:'#f8f9fa'}}>
+  <h2 style={{textAlign:'center', fontSize:'28px', marginBottom:'40px'}}>Chi siamo</h2>
+  <div style={{
+    display:'grid',
+    gridTemplateColumns:'repeat(auto-fit, minmax(220px, 1fr))',
+    gap:'28px',
+    maxWidth:'1000px',
+    margin:'0 auto'
+  }}>
+    {[
+      {
+        img:'/prof1.jpg',
+        nome:'Dr. Luca Bianchi',
+        ruolo:'Psicologo clinico',
+        descrizione:'Specializzato in psicologia clinica e terapia cognitivo-comportamentale, aiuta adolescenti e adulti a superare momenti di crisi, ansia e difficoltà relazionali con un approccio empatico e personalizzato.'
+      },
+      {
+        img:'/prof2.jpg',
+        nome:'Dott.ssa Giulia Rossi',
+        ruolo:'Psicoterapeuta',
+        descrizione:'Si occupa di sostegno individuale e di coppia. Lavora sul miglioramento della comunicazione e sulla gestione delle emozioni, integrando tecniche cognitive e approcci centrati sulla persona.'
+      },
+      {
+        img:'/prof3.jpg',
+        nome:'Dott.ssa Anna Verdi',
+        ruolo:'Psicologa dell’età evolutiva',
+        descrizione:'Segue bambini e adolescenti con difficoltà scolastiche, comportamentali o emotive, collaborando con genitori e insegnanti per creare percorsi di crescita sereni e costruttivi.'
+      },
+      {
+        img:'/prof4.jpg',
+        nome:'Dr. Marco Neri',
+        ruolo:'Consulente relazionale',
+        descrizione:'Supporta individui e coppie nei momenti di cambiamento, aiutandoli a migliorare la consapevolezza di sé e la qualità delle relazioni interpersonali attraverso un ascolto attivo e accogliente.'
+      }
+    ].map((p, i) => (
+      <div key={i} style={{
+        background:'#ffffff',
+        padding:'24px',
+        textAlign:'center',
+        boxShadow:'0 0 12px rgba(0,0,0,0.08)',
+        transition:'transform 0.25s ease, box-shadow 0.25s ease',
+      }}
+      onMouseEnter={(e)=>{e.currentTarget.style.boxShadow='0 0 20px rgba(37,99,235,0.3)'; e.currentTarget.style.transform='translateY(-4px)';}}
+      onMouseLeave={(e)=>{e.currentTarget.style.boxShadow='0 0 12px rgba(0,0,0,0.08)'; e.currentTarget.style.transform='translateY(0)';}}
+      >
+        <img src={p.img} alt={p.nome} style={{width:'100%', height:'auto', marginBottom:'16px'}} />
+        <h3 style={{margin:'8px 0 4px', fontSize:'18px'}}>{p.nome}</h3>
+        <p style={{margin:'0 0 12px', color:'#555', fontWeight:'bold'}}>{p.ruolo}</p>
+        <p style={{margin:0, fontSize:'15px', lineHeight:1.5, color:'#444'}}>{p.descrizione}</p>
+      </div>
+    ))}
+  </div>
+</section>
 
-          <div style={{
-            border:'1px solid #ddd',
-            borderRadius:'10px',
-            padding:'20px',
-            textAlign:'center',
-            background:'#fff'
-          }}>
-            <img src="/prof2.jpg" alt="Psicologo 2" style={{width:'100%', borderRadius:'8px', marginBottom:'10px'}} />
-            <h3>Nome Psicologo 2</h3>
-            <p>Psicoterapeuta</p>
-          </div>
-
-          <div style={{
-            border:'1px solid #ddd',
-            borderRadius:'10px',
-            padding:'20px',
-            textAlign:'center',
-            background:'#fff'
-          }}>
-            <img src="/prof3.jpg" alt="Psicologo 3" style={{width:'100%', borderRadius:'8px', marginBottom:'10px'}} />
-            <h3>Nome Psicologo 3</h3>
-            <p>Psicologo infantile</p>
-          </div>
-
-          <div style={{
-            border:'1px solid #ddd',
-            borderRadius:'10px',
-            padding:'20px',
-            textAlign:'center',
-            background:'#fff'
-          }}>
-            <img src="/prof4.jpg" alt="Psicologo 4" style={{width:'100%', borderRadius:'8px', marginBottom:'10px'}} />
-            <h3>Nome Psicologo 4</h3>
-            <p>Consulente relazionale</p>
-          </div>
-        </div>
-      </section>
 
       {/* CONTATTI */}
       <section id="contatti" style={{padding:'60px 20px'}}>
