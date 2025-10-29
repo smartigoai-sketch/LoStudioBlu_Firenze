@@ -13,7 +13,7 @@ export default function Home() {
         alignItems:'center',
         zIndex:100
       }}>
-        <h1 style={{margin:0, fontSize:'20px'}}>Studio Blu Psicologia</h1>
+        <h1 style={{margin:0, fontSize:'20px'}}>Studio Blu Firenze</h1>
         <nav style={{display:'flex', gap:'20px'}}>
           <a href="#home" style={{textDecoration:'none', color:'#333'}}>Home</a>
           <a href="#chi-siamo" style={{textDecoration:'none', color:'#333'}}>Chi siamo</a>
