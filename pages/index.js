@@ -148,7 +148,7 @@ color: "#000",
         grid-template-columns: repeat(4, 1fr) !important;
       }
     }
-  `}</style>
+  }</style>
 
         >
           {[
