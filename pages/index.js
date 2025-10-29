@@ -124,14 +124,32 @@ color: "#000",
         <h2 style={{ textAlign: "center", fontSize: "26px", marginBottom: "30px" }}>
           Chi siamo
         </h2>
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))",
-            gap: "20px",
-            maxWidth: "1000px",
-            margin: "0 auto",
-          }}
+      <div
+  style={{
+    display: "grid",
+    gap: "20px",
+    maxWidth: "1000px",
+    margin: "0 auto",
+  }}
+>
+  <style>{`
+    @media (max-width: 600px) {
+      div[style*='grid'] {
+        grid-template-columns: 1fr !important;
+      }
+    }
+    @media (min-width: 601px) and (max-width: 950px) {
+      div[style*='grid'] {
+        grid-template-columns: repeat(2, 1fr) !important;
+      }
+    }
+    @media (min-width: 951px) {
+      div[style*='grid'] {
+        grid-template-columns: repeat(4, 1fr) !important;
+      }
+    }
+  `}</style>
+
         >
           {[
             {
