@@ -33,15 +33,23 @@ export default function Home() {
         <nav className="desktop-menu" style={{ display: "none" }}>
           <a href="#home" style={{ margin: "0 12px", color: "#333" }}>
             Home
+              textDecoration: "none",
+color: "#000",
           </a>
           <a href="#chi-siamo" style={{ margin: "0 12px", color: "#333" }}>
             Chi siamo
+              textDecoration: "none",
+color: "#000",
           </a>
           <a href="#contatti" style={{ margin: "0 12px", color: "#333" }}>
             Contatti
+              textDecoration: "none",
+color: "#000",
           </a>
           <a href="#join-us" style={{ margin: "0 12px", color: "#333" }}>
             Join Us
+              textDecoration: "none",
+color: "#000",
           </a>
         </nav>
 
@@ -119,7 +127,7 @@ export default function Home() {
         <div
           style={{
             display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
+            gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))",
             gap: "20px",
             maxWidth: "1000px",
             margin: "0 auto",
