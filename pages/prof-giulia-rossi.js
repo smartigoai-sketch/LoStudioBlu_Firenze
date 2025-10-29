@@ -1,12 +1,12 @@
-export default function ProfGiuliaRossi() {
+export default function ProfAnnaVerdi() {
   return (
     <div style={{fontFamily:'Arial, sans-serif', padding:'40px 16px', maxWidth:'800px', margin:'0 auto', color:'#333'}}>
-     <a href="/" className="back-home">← Torna alla Home</a>
-      <img src="/prof2.jpg" alt="Dott.ssa Giulia Rossi" style={{width:'200px', display:'block', margin:'0 auto 20px'}} />
-      <h1 style={{textAlign:'center'}}>Dott.ssa Giulia Rossi</h1>
+      <a href="/" className="back-home">← Torna alla Home</a>
+      <img src="/prof3.jpg" alt="Dott.ssa Anna Verdi" style={{width:'200px', display:'block', margin:'0 auto 20px'}} />
+      <h1 style={{textAlign:'center'}}>Dott.ssa Anna Verdi</h1>
       <p style={{fontSize:'16px', lineHeight:1.6, textAlign:'justify'}}>
-        Psicoterapeuta specializzata nel sostegno individuale e di coppia. Lavora sul miglioramento della comunicazione e sulla gestione
-        delle emozioni, integrando tecniche cognitive e approcci centrati sulla persona.
+        Psicologa dell’età evolutiva che segue bambini e adolescenti con difficoltà scolastiche, comportamentali o emotive, 
+        collaborando con genitori e insegnanti per creare percorsi di crescita sereni e costruttivi.
       </p>
 
       <h2 style={{marginTop:'50px', textAlign:'center'}}>Contattami</h2>
@@ -15,13 +15,14 @@ export default function ProfGiuliaRossi() {
         method="post"
         style={{display:'grid', gap:'16px', maxWidth:'500px', margin:'0 auto'}}
       >
-        <input type="hidden" name="professionista" value="Dott.ssa Giulia Rossi" />
+        <input type="hidden" name="professionista" value="Dott.ssa Anna Verdi" />
         <input type="text" name="nome" placeholder="Tuo nome" required style={{padding:'10px', fontSize:'16px'}} />
         <input type="email" name="email" placeholder="Tua email" required style={{padding:'10px', fontSize:'16px'}} />
         <textarea name="messaggio" placeholder="Il tuo messaggio" rows="4" required style={{padding:'10px', fontSize:'16px'}} />
-     <button type="submit">Invia</button>
+      <button type="submit">Invia</button>
 
-      </form>
+
+</form>
         <style>{`
   /* 🔗 Link generali */
   a {
