@@ -20,6 +20,8 @@ export default function ProfAnnaVerdi() {
         <input type="email" name="email" placeholder="Tua email" required style={{padding:'10px', fontSize:'16px'}} />
         <textarea name="messaggio" placeholder="Il tuo messaggio" rows="4" required style={{padding:'10px', fontSize:'16px'}} />
       <button type="submit">Invia</button>
+
+
 </form>
         <style>{`
   /* 🔗 Link generali */
