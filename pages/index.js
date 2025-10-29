@@ -119,108 +119,91 @@ color: "#000",
         </p>
       </section>
 
-      {/* CHI SIAMO */}
-      <section id="chi-siamo" style={{ padding: "40px 16px", background: "#f8f8f8" }}>
-        <h2 style={{ textAlign: "center", fontSize: "26px", marginBottom: "30px" }}>
-          Chi siamo
-        </h2>
-      <div
-  style={{
-    display: "grid",
-    gap: "20px",
-    maxWidth: "1000px",
-    margin: "0 auto",
-  }}
->
+    {/* CHI SIAMO */}
+<section id="chi-siamo" style={{ padding: "40px 16px", background: "#f8f8f8" }}>
+  <h2 style={{ textAlign: "center", fontSize: "26px", marginBottom: "30px" }}>
+    Chi siamo
+  </h2>
+
+  {/* griglia responsive: mai 3+1 */}
+  <div className="cs-grid">
+    {[
+      {
+        img: "/prof1.jpg",
+        nome: "Dr. Luca Bianchi",
+        ruolo: "Psicologo clinico",
+        descrizione:
+          "Specializzato in psicologia clinica e terapia cognitivo-comportamentale. Aiuta adolescenti e adulti a superare momenti di crisi, ansia e difficoltà relazionali.",
+        link: "/prof-luca-bianchi",
+      },
+      {
+        img: "/prof2.jpg",
+        nome: "Dott.ssa Giulia Rossi",
+        ruolo: "Psicoterapeuta",
+        descrizione:
+          "Sostegno individuale e di coppia, lavoro su comunicazione ed emozioni con approccio centrato sulla persona.",
+        link: "/prof-giulia-rossi",
+      },
+      {
+        img: "/prof3.jpg",
+        nome: "Dott.ssa Anna Verdi",
+        ruolo: "Psicologa dell’età evolutiva",
+        descrizione:
+          "Segue bambini e adolescenti con difficoltà scolastiche, comportamentali o emotive, in collaborazione con famiglia e scuola.",
+        link: "/prof-anna-verdi",
+      },
+      {
+        img: "/prof4.jpg",
+        nome: "Dr. Marco Neri",
+        ruolo: "Consulente relazionale",
+        descrizione:
+          "Supporta individui e coppie nei momenti di cambiamento, migliorando consapevolezza e qualità delle relazioni.",
+        link: "/prof-marco-neri",
+      },
+    ].map((p, i) => (
+      <a key={i} href={p.link} className="cs-card">
+        <img src={p.img} alt={p.nome} style={{ width: "100%", marginBottom: 16 }} />
+        <h3 style={{ fontSize: 18, marginBottom: 4 }}>{p.nome}</h3>
+        <p style={{ color: "#555", fontWeight: "bold", marginBottom: 8 }}>{p.ruolo}</p>
+        <p style={{ fontSize: 15, lineHeight: 1.5, color: "#444", margin: 0 }}>{p.descrizione}</p>
+      </a>
+    ))}
+  </div>
+
+  {/* stile inline dedicato alla griglia/card */}
   <style>{`
+    .cs-grid {
+      display: grid;
+      gap: 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
     @media (max-width: 600px) {
-      div[style*='grid'] {
-        grid-template-columns: 1fr !important;
-      }
+      .cs-grid { grid-template-columns: 1fr; }
     }
     @media (min-width: 601px) and (max-width: 950px) {
-      div[style*='grid'] {
-        grid-template-columns: repeat(2, 1fr) !important;
-      }
+      .cs-grid { grid-template-columns: repeat(2, 1fr); }
     }
     @media (min-width: 951px) {
-      div[style*='grid'] {
-        grid-template-columns: repeat(4, 1fr) !important;
-      }
+      .cs-grid { grid-template-columns: repeat(4, 1fr); }
     }
-  }</style>
 
-        >
-          {[
-            {
-              img: "/prof1.jpg",
-              nome: "Dr. Luca Bianchi",
-              ruolo: "Psicologo clinico",
-              descrizione:
-                "Specializzato in psicologia clinica e terapia cognitivo-comportamentale. Aiuta adolescenti e adulti a superare momenti di crisi, ansia e difficoltà relazionali.",
-              link: "/prof-luca-bianchi",
-            },
-            {
-              img: "/prof2.jpg",
-              nome: "Dott.ssa Giulia Rossi",
-              ruolo: "Psicoterapeuta",
-              descrizione:
-                "Si occupa di sostegno individuale e di coppia, lavora sulla comunicazione e sulla gestione delle emozioni con approccio centrato sulla persona.",
-              link: "/prof-giulia-rossi",
-            },
-            {
-              img: "/prof3.jpg",
-              nome: "Dott.ssa Anna Verdi",
-              ruolo: "Psicologa dell’età evolutiva",
-              descrizione:
-                "Segue bambini e adolescenti con difficoltà scolastiche, comportamentali o emotive, collaborando con genitori e insegnanti.",
-              link: "/prof-anna-verdi",
-            },
-            {
-              img: "/prof4.jpg",
-              nome: "Dr. Marco Neri",
-              ruolo: "Consulente relazionale",
-              descrizione:
-                "Supporta individui e coppie nei momenti di cambiamento, aiutandoli a migliorare la consapevolezza di sé e la qualità delle relazioni.",
-              link: "/prof-marco-neri",
-            },
-          ].map((p, i) => (
-            <a
-              key={i}
-              href={p.link}
-              style={{
-                background: "#fff",
-                padding: "24px",
-                textDecoration: "none",
-                color: "#000",
-                boxShadow: "0 0 12px rgba(0,0,0,0.08)",
-                transition: "transform 0.25s, box-shadow 0.25s",
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.boxShadow = "0 0 20px rgba(37,99,235,0.3)";
-                e.currentTarget.style.transform = "translateY(-4px)";
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.boxShadow = "0 0 12px rgba(0,0,0,0.08)";
-                e.currentTarget.style.transform = "translateY(0)";
-              }}
-            >
-              <img
-                src={p.img}
-                alt={p.nome}
-                style={{ width: "100%", marginBottom: "16px" }}
-              />
-              <h3 style={{ fontSize: "18px", marginBottom: "4px" }}>{p.nome}</h3>
-              <p style={{ color: "#555", fontWeight: "bold", marginBottom: "8px" }}>
-                {p.ruolo}
-              </p>
-              <p style={{ fontSize: "15px", lineHeight: 1.5, color: "#444" }}>
-                {p.descrizione}
-              </p>
-            </a>
-          ))}
-        </div>
-      </section>
+    .cs-card {
+      display: block;
+      background: #fff;
+      text-decoration: none;
+      color: #000;
+      padding: 24px;
+      box-shadow: 0 0 12px rgba(0,0,0,0.08);
+      transition: transform .25s ease, box-shadow .25s ease;
+    }
+    .cs-card:hover {
+      box-shadow: 0 0 20px rgba(37,99,235,0.3);
+      transform: translateY(-4px);
+    }
+  `}</style>
+</section>
+
 
       {/* CONTATTI */}
       <section id="contatti" style={{ padding: "40px 16px" }}>
